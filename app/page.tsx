@@ -71,6 +71,7 @@ function calculateNewRetirement(
       originalRetirementDate,
       delayMonths: 0,
       actualRetirementDate: originalRetirementDate,
+      actualRetirementAge: originalRetirementAge,
     };
   }
 
@@ -190,7 +191,11 @@ export default function Home() {
 
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="framework">性别</Label>
-                <Select onValueChange={(setValue) => setGender(setValue)}>
+                <Select
+                  onValueChange={(setValue) =>
+                    setGender(setValue as GenderType)
+                  }
+                >
                   <SelectTrigger id="framework">
                     <SelectValue placeholder="请选择类型" />
                   </SelectTrigger>
