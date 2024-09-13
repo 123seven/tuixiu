@@ -217,7 +217,7 @@ export default function Home() {
               <p>延迟退休年龄: {retirementInfo.actualRetirementAge} 岁</p>
               <p>延迟月数: {retirementInfo.delayMonths} 个月</p>
               <p>
-                实际退休日期:{" "}
+                延迟退休日期:{" "}
                 {retirementInfo.actualRetirementDate.getFullYear()} 年
                 {retirementInfo.actualRetirementDate.getMonth() + 1} 月
               </p>
