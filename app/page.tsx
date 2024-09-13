@@ -212,9 +212,9 @@ export default function Home() {
           </form>
 
           {retirementInfo && (
-            <div className="mt-4">
+            <div className="mt-5">
               <p>原定退休年龄: {retirementInfo.originalRetirementAge} 岁</p>
-              <p>实际退休年龄: {retirementInfo.actualRetirementAge} 岁</p>
+              <p>延迟退休年龄: {retirementInfo.actualRetirementAge} 岁</p>
               <p>延迟月数: {retirementInfo.delayMonths} 个月</p>
               <p>
                 实际退休日期:{" "}
@@ -224,8 +224,7 @@ export default function Home() {
             </div>
           )}
         </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancel</Button>
+        <CardFooter className="flex justify-end">
           <Button onClick={handleCalculate}>计算</Button>
         </CardFooter>
       </Card>
